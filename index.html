@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Biglietto Treno</title>
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+
+    <div class="container">
+      <h1 class="tittle">calcola il prezzo del tuo biglietto</h1>
+
+      <section class="input">
+        <div class="row">
+          <div class="col">
+            <label for="name">Nome e Cognome</label>
+            <input type="text" id="name" placeholder="inserisci il tuo nome">
+          </div>
+
+          <div class="col">
+            <label for="kilometres">Km da percorrere</label>
+            <input type="text" id="kilometres" placeholder="inserisci i km">
+          </div>
+
+          <div class="col">
+            <label for="age-range">Fascia d'età</label>
+            <select id="age-range" name="age-range">
+              <option value="underage">Minorenne</option>
+              <option value="adult">Maggiorenne</option>
+              <option value="over65">Over65</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <button id="btnGenera" class="btn">Genera</button>
+          <button id="btnAnnulla" class="btn">Anulla</button>
+        </div>
+      </section>
+
+      <!-- Biglietto -->
+      <section id="ticket" class="hidden">
+        <h2>il tuo biglietto</h2>
+
+        <div class="content">
+          <div class="name">
+            <h3>Nome passeggero:<span id="passenger-name"></span></h3>
+          </div>
+
+          <div class="offer">
+            <table>
+              <thead>
+                <tr>
+                  <th>Offerta</th>
+                  <th>Carrozza</th>
+                  <th>Codice CP</th>
+                  <th>Costo Biglietto</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span id="offer-applied"></span></td>
+                  <td><span id="passenger-car"></span></td>
+                  <td><span id="code-cp"></span></td>
+                  <td><span id="cost"></span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>
